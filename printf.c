@@ -16,10 +16,7 @@ int _printf(const char *format, ...)
 		{
 			format++;
 			if (*format == 'c')
-			{
-				_putchar(va_arg(mylist, int));
-				count++;
-			}
+				count += _putchar(va_arg(mylist, int));
 			else if (*format == 's')
 			{
 				char *str = va_arg(mylist, char *);
@@ -32,10 +29,7 @@ int _printf(const char *format, ...)
 					}
 			}
 			else if (*format == '%')
-			{
-				_putchar('%');
-				count++;
-			}
+				count += _putchar('%');
 			else
 			{
 				_putchar('%');
