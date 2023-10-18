@@ -37,10 +37,7 @@ int _printf(const char *format, ...)
 			}
 		}
 		else
-		{
-			_putchar(*format);
-			count++;
-		}
+			count += _putchar(*format);
 		format++;
 	}
 va_end(mylist);
