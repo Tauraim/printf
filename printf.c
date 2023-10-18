@@ -23,13 +23,12 @@ int _printf(const char *format, ...)
 
 				if (str != NULL)
 					while (*str)
-					{
-						_putchar(*str++);
-						count++;
-					}
+						count += _putchar(*str++);
 			}
 			else if (*format == '%')
 				count += _putchar('%');
+			else if (*format == 'd' || *format == 'i')
+				count += _printint(mylist);
 			else
 			{
 				_putchar('%');
